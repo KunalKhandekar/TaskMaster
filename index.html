@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster: Unleash Your Productivity!</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <!-- Styling CSS  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive CSS  -->
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+    <!-- Navbar  -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ToDo Logo">
+            <p>Let's Do It</p>
+        </div>
+        <div class="navigator">
+            <a href="#cont" class="btn">Access</a>
+            <button class="btn" onclick="confirmation()">Delete All</button>
+        </div>
+    </header>
+
+    <!-- To-Do Container  -->
+    <div class="list-cont" id="cont">
+
+        <!-- Add a Task Box-->
+        <div class="add-box">
+            <div class="logo-btn" onclick="formpop()">
+                <img src="images/plus.png" alt="Add">
+            </div>
+            <p>Add New Task</p>
+        </div>
+
+        <!-- Delete All Task Box -->
+        <div class="del-box">
+            <div class="logo-btn" onclick="confirmation()">
+                <img src="images/close.png" alt="Delete">
+            </div>
+            <p>Delete All Task</p>
+        </div>
+    </div>
+    
+    <!-- Form Blur Background  -->
+    <section class="section"></section>
+
+        <!-- Form Container  -->
+        <div class="form-container">
+            <form action="#" id="form">
+                <div class="close" onclick="submit_close()"><img src="images/close.png" alt=""></div>
+                <h2>Create a New Task</h2>
+                <div class="inputBox">
+                    <input type="text" required="required" id="task-title">
+                    <span>Title</span>
+                </div>
+                <div class="inputBox">
+                    <textarea required="required" id="message"></textarea>
+                    <span>Type your Message</span>
+                </div>
+                <button type="submit" class="submit-btn">Insert</button>
+            </form>
+        </div>
+
+    <!-- Pop up Blur Container  -->
+    <div class="blurContainer">
+
+        <!-- Pop Up Box  -->
+        <div class="ask-popup">
+            <div class="close-img">
+                <img src="images/alert.png" alt="close">
+            </div>
+            <p>Are you Sure ?</p>
+            <button class="cBtn y" onclick="showResult(true)">Yes</button>
+            <button class="cBtn n" onclick="showResult(false)">No</button>
+        </div>
+    </div>
+
+    <!-- JavaScript  -->
+    <script src="script.js"></script>
+</body>
+
+</html>

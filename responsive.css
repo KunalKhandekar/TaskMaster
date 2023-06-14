@@ -1,0 +1,141 @@
+@media screen and (max-width:450px) {
+    .navigator {
+        display: none;
+    }
+
+    .form-container {
+        width: 340px;
+        margin-left: -170px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    body {
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width:340px) {
+
+    .box,
+    .add-box,
+    .del-box {
+        width: 200px;
+        height: 200px;
+        font-size: 14px;
+    }
+
+    .add-box p,
+    .del-box p {
+        font-size: 16px;
+    }
+
+    .logo-btn {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo-btn img {
+        width: 30px;
+    }
+
+    .box .desc {
+        height: 75px;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    #opt {
+        width: 70px;
+    }
+
+    #opt p {
+        font-size: 12px;
+    }
+
+    .cancel img {
+        width: 6px;
+    }
+
+    .form-container {
+        width: 250px;
+        margin-left: -125px;
+    }
+
+    .form-container h2 {
+        font-size: 1.4em;
+    }
+
+    .form-container .close img {
+        width: 15px;
+    }
+}
+
+@media screen and (max-width:288px) {
+    .list-cont {
+        padding: 0.8em;
+    }
+
+    .box,
+    .add-box,
+    .del-box {
+        width: 170px;
+        height: 170px;
+        font-size: 10px;
+    }
+
+    .add-box p,
+    .del-box p {
+        font-size: 12px;
+    }
+
+    .logo-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-btn img {
+        width: 20px;
+    }
+
+    .box .desc {
+        height: 60px
+    }
+
+    .bottom img {
+        width: 14px;
+    }
+    
+    #opt {
+        width: 60px;
+    }
+
+    #opt p {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .cancel img {
+        width: 4px;
+    }
+}
+
+@media screen and (max-width:270px) {
+    .ask-popup {
+        width: 190px;
+        margin-left: -95px;
+    }
+
+    .form-container {
+        width: 190px;
+        margin-left: -95px;
+    }
+
+    .form-container h2 {
+        font-size: 1em;
+    }
+
+    .form-container .close img {
+        width: 10px;
+    }
+}

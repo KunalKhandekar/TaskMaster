@@ -1,0 +1,417 @@
+/* CSS Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/620bd6d655f2044afa28bff4_glassmorphism.jpeg') no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 2.8em;
+}
+
+/* NavBar (Top Banner)  */
+header {
+    max-width: 1150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgb(255 255 255 / 24%);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6);
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.logo img {
+    width: 35px;
+}
+.navigator a {
+    text-decoration: none;
+}
+
+.navigator .btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.29);
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+    color: #ffffff;
+}
+
+.navigator a {
+    margin-right: 10px;
+}
+
+/* NavBar End  */
+
+/* TODO Container Starts  */
+.list-cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1150px;
+    padding: 2.5em;
+    background: rgb(255 255 255 / 24%);
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: auto;
+}
+
+.add-box,
+.del-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.add-box p,
+.del-box p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.logo-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px dotted #fff;
+}
+
+.logo-btn img {
+    width: 40px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.logo-btn:active {
+    animation: animate 0.3s;
+}
+
+.add-box,
+.del-box,
+.box {
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: 15px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    transition: 0.3s ease;
+}
+.add-box:hover,
+.del-box:hover,
+.box:hover {
+    background: rgba(255, 255, 255, 0.29);
+    transform: scale(1.1);
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+    color: #ffffff;
+}
+
+.box {
+    position: relative;
+}
+
+.box h2 {
+    color: #fff;
+    overflow: scroll;
+}
+
+.box>hr {
+    margin-block: 10px;
+    color: #fff;
+}
+
+.box .desc {
+    height: 125px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom img {
+    width: 20px;
+}
+
+#opt {
+    width: 100px;
+    background: rgba(255, 255, 255, 0.99);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 2000;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#opt.show {
+  display: block;
+  animation: fadeIn 0.5s forwards;
+}
+
+#opt p {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#opt p:active {
+    transform: scale(75%);
+    transition: 0.08s;
+}
+
+.cancel {
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cancel img {
+    width: 10px;
+}
+/* TODO container Ends  */
+
+
+/* Pop Up Container Starts */
+.blurContainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.ask-popup {
+    width: 250px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.436);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -90px;
+    border-radius: 10px;
+    color: #000000;
+    padding: 30px;
+    text-align: center;
+    display: none;
+    transition: 0.3s ease-in-out;
+    z-index: 3;
+}
+
+.ask-popup p {
+    margin-block: 15px;
+    font-size: 20px;
+}
+
+.cBtn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cBtn:hover {
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+}
+
+.y {
+    background: rgba(0, 255, 38, 0.881);
+}
+
+.n {
+    background: rgba(253, 25, 0, 0.881);
+}
+
+.close-img img {
+    width: 40px;
+}
+/* Pop Up Container Ends */
+
+/* Form Popup Starts */
+.form-container .close img {
+    width: 20px;
+}
+
+.form-container .close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.form-container .close:active {
+    transform: scale(0.9);
+}
+
+.form-container {
+    width: 400px;
+    height: 340px;
+    gap: 30px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: rgb(255 255 255 / 24%);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -170px;
+    display: none;
+    z-index: 5;
+}
+
+.form-container h2 {
+    font-size: 2em;
+    color: #ffffff;
+    padding-block: 10px;
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+    padding-block: 15px;
+}
+
+.inputBox input,
+.inputBox textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.25);
+    background: rgb(255 255 255 / 30%);
+    border-radius: 5px;
+    outline: none;
+    color: #ffffff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span,
+.inputBox textarea:valid ~ span,
+.inputBox textarea:focus ~ span {
+    color: #00dfc4;
+    transform: translateX(10px) translateY(-9px );
+    font-size: 1em;
+    padding: 0 10px;
+    background: #1d2b3a;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+}
+
+.inputBox input:valid,
+.inputBox input:focus,
+.inputBox textarea:valid,
+.inputBox textarea:focus {
+    border: 2px solid #00dfc4;
+}
+
+.inputBox textarea {
+    resize: none;
+    height: 100px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 8px 0;
+    background-color: #00dfc4;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+section {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
+    display: none;
+    z-index: 1;
+}
+
+/* Form Popup End */
