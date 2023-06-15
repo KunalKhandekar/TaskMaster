@@ -26,3 +26,7 @@ The code relies on the following files:
 - script.js: JavaScript file containing the necessary functionality for the application.
 
 # Preview
+<img width="960" alt="Screenshot 2023-06-15 185952" src="https://github.com/KunalKhandekar/TaskMaster/assets/134169718/64a70c36-adb9-426d-810d-2c14b62f9d58">
+
+# Link
+Go to - https://task-recorder-by-kunal.netlify.app/
